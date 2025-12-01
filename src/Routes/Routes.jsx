@@ -11,6 +11,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import EditProfile from "../Components/EditProfile";
 import ForgatePassword from "../Components/ForgatePassword";
 import ErrorPage from "../Pages/ErrorPage";
+import AllSkill from "../Pages/AllSkill";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,13 @@ export const router = createBrowserRouter([
             <CircleLoader></CircleLoader>
           </div>)
       },
+
+      {
+        path:'/all-skill',
+        Component:AllSkill,
+        loader:() => fetch("/Data.json")
+      },
+
       {
         path: "/profile",
         element: (
@@ -51,6 +59,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      
       
 
       {

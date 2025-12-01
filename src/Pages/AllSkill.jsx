@@ -1,11 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
+import Card from '../Components/Card';
 
-import Card from './Card';
-
-const Cateroies = () => {
-    const skillData = useLoaderData()
-    
+const AllSkill = () => {
+    const allData = useLoaderData()
+    console.log(allData)
     return (
         <div className='mt-10 md:mt-15 lg:mt-20 container mx-auto'>
           <div className='space-y-3 text-center '>
@@ -14,7 +13,7 @@ const Cateroies = () => {
           </div>
           <div className='grid md:p-5 p-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 my-15'>
             {
-                skillData.slice(0, 8).map(data => <Card
+                allData.map(data => <Card
                 key={data.skillId}
                 data = {data}>
 
@@ -25,4 +24,4 @@ const Cateroies = () => {
     );
 };
 
-export default Cateroies;
+export default AllSkill;

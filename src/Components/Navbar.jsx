@@ -18,12 +18,16 @@ const Navbar = () => {
       <li className="font-bold text-xl">
         <NavLink to="/">Home</NavLink>
       </li>
+      <li className="font-bold text-xl">
+        <NavLink to='/all-skill'>All Skill</NavLink>
+
+      </li>
       
    
     {user && <>
-      (<li className="font-bold text-xl">
+      <li className="font-bold text-xl">
         <NavLink to="/profile">My Profile</NavLink>
-      </li>)
+      </li>
       </>}
        </>
   );
