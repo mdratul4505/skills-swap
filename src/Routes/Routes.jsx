@@ -33,13 +33,14 @@ export const router = createBrowserRouter([
         hydrateFallbackElement: (
           <div className="min-h-screen flex justify-center items-center">
             <CircleLoader></CircleLoader>
-          </div>)
+          </div>
+        ),
       },
 
       {
-        path:'/all-skill',
-        Component:AllSkill,
-        loader:() => fetch("/Data.json")
+        path: "/all-skill",
+        Component: AllSkill,
+        loader: () => fetch("/Data.json"),
       },
 
       {
@@ -59,16 +60,14 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      
-      
 
       {
         path: "/login",
         Component: Login,
       },
       {
-        path:'/forget-password',
-        Component:ForgatePassword
+        path: "/forget-password",
+        Component: ForgatePassword,
       },
       {
         path: "/signup",
@@ -76,11 +75,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/card-details/:id",
-        element: (
-          <PrivateRoute>
-            <CardDeatils></CardDeatils>
-          </PrivateRoute>
-        ),
+        element: <CardDeatils></CardDeatils>,
         loader: () => fetch("/Data.json"),
         hydrateFallbackElement: (
           <div className="min-h-screen flex justify-center items-center">

@@ -22,6 +22,9 @@ const Navbar = () => {
         <NavLink to='/all-skill'>All Skill</NavLink>
 
       </li>
+
+    
+      
       
    
     {user && <>
@@ -33,7 +36,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="border-b border-gray-400 bg-white shadow-md">
+    <div className="border-b sticky top-0 z-50 border-gray-400 bg-white shadow-md">
       <div className="container mx-auto flex h-16 items-center justify-between">
         <div className="navbar-start">
           <div className="dropdown">
